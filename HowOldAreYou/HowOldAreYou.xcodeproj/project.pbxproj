@@ -14,6 +14,7 @@
 		CC5F71992063F99500B8DC8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5F71972063F99500B8DC8F /* LaunchScreen.storyboard */; };
 		CC5F71A42063F99500B8DC8F /* HowOldAreYouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F71A32063F99500B8DC8F /* HowOldAreYouTests.swift */; };
 		CC5F71AF2063F99500B8DC8F /* HowOldAreYouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F71AE2063F99500B8DC8F /* HowOldAreYouUITests.swift */; };
+		CCB8FE92206833B4001A730A /* penguin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCB8FE91206833B4001A730A /* penguin.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CC5F71AA2063F99500B8DC8F /* HowOldAreYouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowOldAreYouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5F71AE2063F99500B8DC8F /* HowOldAreYouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowOldAreYouUITests.swift; sourceTree = "<group>"; };
 		CC5F71B02063F99500B8DC8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCB8FE91206833B4001A730A /* penguin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = penguin.jpg; path = ../../penguin.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CC5F71952063F99500B8DC8F /* Assets.xcassets */,
 				CC5F71972063F99500B8DC8F /* LaunchScreen.storyboard */,
 				CC5F719A2063F99500B8DC8F /* Info.plist */,
+				CCB8FE91206833B4001A730A /* penguin.jpg */,
 			);
 			path = HowOldAreYou;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB8FE92206833B4001A730A /* penguin.jpg in Resources */,
 				CC5F71992063F99500B8DC8F /* LaunchScreen.storyboard in Resources */,
 				CC5F71962063F99500B8DC8F /* Assets.xcassets in Resources */,
 				CC5F71942063F99500B8DC8F /* Main.storyboard in Resources */,
