@@ -18,10 +18,12 @@ class ViewController: UIViewController {
         let randomNum = arc4random_uniform(6);
         if let userGuess = UserGuess.text {
             if let intUserGuess = Int(userGuess) {
-                if intUserGuess != randomNum {
-                    AnswerLabel.text = "Wrong! The correct answer is \(randomNum)"
-                } else {
-                    AnswerLabel.text = "Correct!"
+                while intUserGuess != randomNum {
+                    if intUserGuess != randomNum {
+                        AnswerLabel.text = "Wrong! The correct answer is \(randomNum)"
+                    } else {
+                        AnswerLabel.text = "Correct!"
+                    }
                 }
             }
         }
