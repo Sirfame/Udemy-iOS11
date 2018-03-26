@@ -21,3 +21,6 @@ var bool = true;
 if bool {
     print(name)
 }
+
+// Random numbers
+let diceRoll = arc4random_uniform(6)
