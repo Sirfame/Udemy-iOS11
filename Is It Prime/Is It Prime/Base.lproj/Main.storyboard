@@ -45,9 +45,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kE-1b-frp">
-                                <rect key="frame" x="0.0" y="246" width="414" height="116"/>
+                                <rect key="frame" x="0.0" y="246" width="414" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="116" id="SPT-Qu-0yh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="n0B-n5-jZM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="115.59220389805098"/>
+            <point key="canvasLocation" x="115.94202898550725" y="114.94565217391305"/>
         </scene>
     </scenes>
 </document>

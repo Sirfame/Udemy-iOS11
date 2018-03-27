@@ -21,6 +21,8 @@ class ViewController: UIViewController {
                 } else {
                     answerLabel.text = "\(intNumber) is not a prime number"
                 }
+            } else {
+                answerLabel.text = "Please enter a positive whole number"
             }
         }
     }
