@@ -9,13 +9,49 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBAction func CameraButtonPressed(_ sender: Any) {
-        print("Camera button pressed")
+    
+    var timer = Timer();
+    var currTime = 210;
+    
+    @IBOutlet weak var TimerLabel: UILabel!
+    
+    @IBAction func MinusTenSeconds(_ sender: Any) {
+        currTime -= 10;
+        TimerLabel.text = String(currTime);
     }
+    
+    @IBAction func PlusTenSeconds(_ sender: Any) {
+        currTime += 10;
+        TimerLabel.text = String(currTime);
+    }
+    
+    @IBAction func ResetTimer(_ sender: Any) {
+        currTime = 210;
+        TimerLabel.text = String(currTime);
+    }
+    
+    @IBAction func TimerPlay(_ sender: Any) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.processTimer), userInfo: nil, repeats: true)
+    }
+    
+    @IBAction func TimerPause(_ sender: Any) {
+        timer.invalidate();
+    }
+    
+    @objc func processTimer() {
+        currTime -= 1;
+        if(currTime > 0) {
+            TimerLabel.text = String(currTime);
+        } else {
+            TimerLabel.text = "Egg is done";
+            timer.invalidate();
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        TimerLabel.text = String(currTime);
     }
 
     override func didReceiveMemoryWarning() {

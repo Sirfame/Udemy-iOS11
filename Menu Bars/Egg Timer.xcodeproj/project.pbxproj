@@ -34,17 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC7EB001206AF30A006B885A /* Menu Bars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7EB001206AF30A006B885A /* Egg Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Egg Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7EB004206AF30A006B885A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC7EB006206AF30A006B885A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC7EB009206AF30A006B885A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC7EB00B206AF30A006B885A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC7EB00E206AF30A006B885A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC7EB010206AF30A006B885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC7EB015206AF30B006B885A /* Menu BarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menu BarsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7EB015206AF30B006B885A /* Egg TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Egg TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7EB019206AF30B006B885A /* Menu_BarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu_BarsTests.swift; sourceTree = "<group>"; };
 		CC7EB01B206AF30B006B885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC7EB020206AF30B006B885A /* Menu BarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menu BarsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7EB020206AF30B006B885A /* Egg TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Egg TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7EB024206AF30B006B885A /* Menu_BarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu_BarsUITests.swift; sourceTree = "<group>"; };
 		CC7EB026206AF30B006B885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,9 +87,9 @@
 		CC7EB002206AF30A006B885A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC7EB001206AF30A006B885A /* Menu Bars.app */,
-				CC7EB015206AF30B006B885A /* Menu BarsTests.xctest */,
-				CC7EB020206AF30B006B885A /* Menu BarsUITests.xctest */,
+				CC7EB001206AF30A006B885A /* Egg Timer.app */,
+				CC7EB015206AF30B006B885A /* Egg TimerTests.xctest */,
+				CC7EB020206AF30B006B885A /* Egg TimerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC7EB000206AF30A006B885A /* Menu Bars */ = {
+		CC7EB000206AF30A006B885A /* Egg Timer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC7EB029206AF30B006B885A /* Build configuration list for PBXNativeTarget "Menu Bars" */;
+			buildConfigurationList = CC7EB029206AF30B006B885A /* Build configuration list for PBXNativeTarget "Egg Timer" */;
 			buildPhases = (
 				CC7EAFFD206AF30A006B885A /* Sources */,
 				CC7EAFFE206AF30A006B885A /* Frameworks */,
@@ -140,14 +140,14 @@
 			);
 			dependencies = (
 			);
-			name = "Menu Bars";
+			name = "Egg Timer";
 			productName = "Menu Bars";
-			productReference = CC7EB001206AF30A006B885A /* Menu Bars.app */;
+			productReference = CC7EB001206AF30A006B885A /* Egg Timer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC7EB014206AF30B006B885A /* Menu BarsTests */ = {
+		CC7EB014206AF30B006B885A /* Egg TimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC7EB02C206AF30B006B885A /* Build configuration list for PBXNativeTarget "Menu BarsTests" */;
+			buildConfigurationList = CC7EB02C206AF30B006B885A /* Build configuration list for PBXNativeTarget "Egg TimerTests" */;
 			buildPhases = (
 				CC7EB011206AF30B006B885A /* Sources */,
 				CC7EB012206AF30B006B885A /* Frameworks */,
@@ -158,14 +158,14 @@
 			dependencies = (
 				CC7EB017206AF30B006B885A /* PBXTargetDependency */,
 			);
-			name = "Menu BarsTests";
+			name = "Egg TimerTests";
 			productName = "Menu BarsTests";
-			productReference = CC7EB015206AF30B006B885A /* Menu BarsTests.xctest */;
+			productReference = CC7EB015206AF30B006B885A /* Egg TimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CC7EB01F206AF30B006B885A /* Menu BarsUITests */ = {
+		CC7EB01F206AF30B006B885A /* Egg TimerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC7EB02F206AF30B006B885A /* Build configuration list for PBXNativeTarget "Menu BarsUITests" */;
+			buildConfigurationList = CC7EB02F206AF30B006B885A /* Build configuration list for PBXNativeTarget "Egg TimerUITests" */;
 			buildPhases = (
 				CC7EB01C206AF30B006B885A /* Sources */,
 				CC7EB01D206AF30B006B885A /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				CC7EB022206AF30B006B885A /* PBXTargetDependency */,
 			);
-			name = "Menu BarsUITests";
+			name = "Egg TimerUITests";
 			productName = "Menu BarsUITests";
-			productReference = CC7EB020206AF30B006B885A /* Menu BarsUITests.xctest */;
+			productReference = CC7EB020206AF30B006B885A /* Egg TimerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CC7EAFFC206AF30A006B885A /* Build configuration list for PBXProject "Menu Bars" */;
+			buildConfigurationList = CC7EAFFC206AF30A006B885A /* Build configuration list for PBXProject "Egg Timer" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC7EB000206AF30A006B885A /* Menu Bars */,
-				CC7EB014206AF30B006B885A /* Menu BarsTests */,
-				CC7EB01F206AF30B006B885A /* Menu BarsUITests */,
+				CC7EB000206AF30A006B885A /* Egg Timer */,
+				CC7EB014206AF30B006B885A /* Egg TimerTests */,
+				CC7EB01F206AF30B006B885A /* Egg TimerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,12 +285,12 @@
 /* Begin PBXTargetDependency section */
 		CC7EB017206AF30B006B885A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC7EB000206AF30A006B885A /* Menu Bars */;
+			target = CC7EB000206AF30A006B885A /* Egg Timer */;
 			targetProxy = CC7EB016206AF30B006B885A /* PBXContainerItemProxy */;
 		};
 		CC7EB022206AF30B006B885A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC7EB000206AF30A006B885A /* Menu Bars */;
+			target = CC7EB000206AF30A006B885A /* Egg Timer */;
 			targetProxy = CC7EB021206AF30B006B885A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -465,7 +465,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menu Bars.app/Menu Bars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Egg Timer.app/Egg Timer";
 			};
 			name = Debug;
 		};
@@ -482,7 +482,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menu Bars.app/Menu Bars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Egg Timer.app/Egg Timer";
 			};
 			name = Release;
 		};
@@ -521,7 +521,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC7EAFFC206AF30A006B885A /* Build configuration list for PBXProject "Menu Bars" */ = {
+		CC7EAFFC206AF30A006B885A /* Build configuration list for PBXProject "Egg Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC7EB027206AF30B006B885A /* Debug */,
@@ -530,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC7EB029206AF30B006B885A /* Build configuration list for PBXNativeTarget "Menu Bars" */ = {
+		CC7EB029206AF30B006B885A /* Build configuration list for PBXNativeTarget "Egg Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC7EB02A206AF30B006B885A /* Debug */,
@@ -539,7 +539,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC7EB02C206AF30B006B885A /* Build configuration list for PBXNativeTarget "Menu BarsTests" */ = {
+		CC7EB02C206AF30B006B885A /* Build configuration list for PBXNativeTarget "Egg TimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC7EB02D206AF30B006B885A /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC7EB02F206AF30B006B885A /* Build configuration list for PBXNativeTarget "Menu BarsUITests" */ = {
+		CC7EB02F206AF30B006B885A /* Build configuration list for PBXNativeTarget "Egg TimerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC7EB030206AF30B006B885A /* Debug */,
