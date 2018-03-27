@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var TimerLabel: UILabel!
     
     @IBAction func MinusTenSeconds(_ sender: Any) {
-        currTime -= 10;
-        TimerLabel.text = String(currTime);
+        if(currTime > 10) {
+            currTime -= 10;
+            TimerLabel.text = String(currTime);
+        }
     }
     
     @IBAction func PlusTenSeconds(_ sender: Any) {
