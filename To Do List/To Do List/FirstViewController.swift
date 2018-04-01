@@ -30,7 +30,19 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            ToDoList?.remove(at: indexPath.row);
+            //self.catNames.remove(at: indexPath.row)
+            UserDefaults.standard.set(ToDoList, forKey: "ToDoList")
+            self.table.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
+        print("Table view appeared")
+        ToDoList = UserDefaults.standard.object(forKey: "ToDoList") as? Array<String>
         table.reloadData();
     }
     
