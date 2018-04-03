@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userInput: UITextField!
     @IBOutlet var display: UILabel!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
                     } else {
                         if let unwrappedData = data {
                             if let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue) {
-                                print(dataString);
+                                //print(dataString);
                                 if dataString.contains("Weather-Forecast.com - global weather source.") {
                                     DispatchQueue.main.sync(execute: {
                                         // Update UI
@@ -42,11 +42,11 @@ class ViewController: UIViewController {
                                     var arr2 = temp.components(separatedBy: "</span>");
                                     let weather = NSString(string: "\(arr2[0])");
                                     let displayString = NSString(string: weather).replacingOccurrences(of: "&deg;", with: "°");
-                                    print(displayString);
+                                    //print(displayString);
                                     
                                     DispatchQueue.main.sync(execute: {
                                         // Update UI
-                                        self.display.text = NSString(string: weather).replacingOccurrences(of: "&deg;", with: "°");
+                                        self.display.text = displayString;
                                     });
                                 }
                             }
@@ -67,7 +67,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true;
+    }
 }
 
