@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0941522073165400F6FB26 /* img in Resources */ = {isa = PBXBuildFile; fileRef = CC0941512073165400F6FB26 /* img */; };
+		CC094154207319AD00F6FB26 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC094153207319AA00F6FB26 /* background.jpg */; };
 		CC88C7072072771000AF7AD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88C7062072771000AF7AD9 /* AppDelegate.swift */; };
 		CC88C7092072771000AF7AD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88C7082072771000AF7AD9 /* ViewController.swift */; };
 		CC88C70C2072771000AF7AD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC88C70A2072771000AF7AD9 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC0941512073165400F6FB26 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; name = img; path = "/Users/Sirfame/Documents/Projects/Udemy/Udemy-iOS11/WhatsTheWeather/img"; sourceTree = "<absolute>"; };
+		CC094153207319AA00F6FB26 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		CC88C7032072771000AF7AD9 /* WhatsTheWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsTheWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC88C7062072771000AF7AD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC88C7082072771000AF7AD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		CC88C6FA2072771000AF7AD9 = {
 			isa = PBXGroup;
 			children = (
+				CC094153207319AA00F6FB26 /* background.jpg */,
+				CC0941512073165400F6FB26 /* img */,
 				CC88C7052072771000AF7AD9 /* WhatsTheWeather */,
 				CC88C71A2072771200AF7AD9 /* WhatsTheWeatherTests */,
 				CC88C7252072771200AF7AD9 /* WhatsTheWeatherUITests */,
@@ -229,6 +235,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0941522073165400F6FB26 /* img in Resources */,
+				CC094154207319AD00F6FB26 /* background.jpg in Resources */,
 				CC88C7112072771200AF7AD9 /* LaunchScreen.storyboard in Resources */,
 				CC88C70E2072771200AF7AD9 /* Assets.xcassets in Resources */,
 				CC88C70C2072771000AF7AD9 /* Main.storyboard in Resources */,
