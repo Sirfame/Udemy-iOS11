@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                         // Update UI
                                         self.display.text = "\(input) was not found, sorry."
                                     });
-                                } else {
+                                } else if dataString.contains("(1&ndash;3 days)</span><p class=\"b-forecast__table-description-content\"><span class=\"phrase\">") {
                                     var arr = dataString.components(separatedBy: "(1&ndash;3 days)</span><p class=\"b-forecast__table-description-content\"><span class=\"phrase\">");
                                     let temp = NSString(string: "\(arr[1])");
                                     var arr2 = temp.components(separatedBy: "</span>");
