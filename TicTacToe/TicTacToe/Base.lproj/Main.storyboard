@@ -124,6 +124,23 @@
                                     <constraint firstAttribute="height" constant="390" id="ty5-Oo-0qa"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WT-YG-4LJ">
+                                <rect key="frame" x="152" y="359" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcW-dF-Dq0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crosses has won!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UES-sv-U3M">
+                                <rect key="frame" x="-12.5" y="316" width="400" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="z47-7F-vrH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="zaW-TO-Ow2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="1" green="0.50090166021793769" blue="0.82699000044601645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -139,13 +156,17 @@
                             <constraint firstItem="WFZ-LX-xFm" firstAttribute="top" secondItem="zVo-3G-syT" secondAttribute="bottom" constant="57" id="HfD-iT-XeK"/>
                             <constraint firstItem="xiS-Ca-8IM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="To8-wO-jGF"/>
                             <constraint firstItem="HvJ-5U-NQD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TsL-37-weg"/>
+                            <constraint firstItem="UES-sv-U3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XKF-y6-8Vr"/>
                             <constraint firstItem="OFe-ao-9Vi" firstAttribute="leading" secondItem="HvJ-5U-NQD" secondAttribute="trailing" constant="29" id="Xxa-Pf-AsS"/>
                             <constraint firstItem="OFe-ao-9Vi" firstAttribute="top" secondItem="WFZ-LX-xFm" secondAttribute="bottom" constant="56" id="air-RU-Rvr"/>
+                            <constraint firstItem="6WT-YG-4LJ" firstAttribute="centerX" secondItem="fVR-bi-ID6" secondAttribute="centerX" id="bk3-vZ-Eed"/>
                             <constraint firstItem="WFZ-LX-xFm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e8a-CK-nn8"/>
                             <constraint firstItem="9SG-Ia-dlP" firstAttribute="top" secondItem="xiS-Ca-8IM" secondAttribute="bottom" constant="57" id="eeA-yz-iRB"/>
                             <constraint firstItem="cix-O4-hda" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gKT-oB-3fK"/>
+                            <constraint firstItem="UES-sv-U3M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hRL-DA-6Be"/>
                             <constraint firstItem="zVo-3G-syT" firstAttribute="leading" secondItem="xiS-Ca-8IM" secondAttribute="trailing" constant="29" id="mLn-j9-w2k"/>
                             <constraint firstItem="HvJ-5U-NQD" firstAttribute="top" secondItem="9SG-Ia-dlP" secondAttribute="bottom" constant="56" id="mnM-RG-x3M"/>
+                            <constraint firstItem="6WT-YG-4LJ" firstAttribute="top" secondItem="UES-sv-U3M" secondAttribute="bottom" constant="8" id="o3P-y0-JHK"/>
                             <constraint firstItem="xiS-Ca-8IM" firstAttribute="leading" secondItem="BDW-Gh-gKZ" secondAttribute="trailing" constant="29" id="qHW-eA-aGW"/>
                             <constraint firstItem="WFZ-LX-xFm" firstAttribute="leading" secondItem="9SG-Ia-dlP" secondAttribute="trailing" constant="29" id="sth-XL-RoB"/>
                             <constraint firstItem="9SG-Ia-dlP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wCg-Mr-Iqr"/>
@@ -153,6 +174,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playAgainButton" destination="6WT-YG-4LJ" id="nAd-BY-yvB"/>
+                        <outlet property="winnerLabel" destination="UES-sv-U3M" id="AuM-i9-VSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
