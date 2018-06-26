@@ -28,6 +28,37 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
         
         map.setRegion(region, animated: true)
+        
+        
+        let annotation = MKPointAnnotation();
+        
+        annotation.title = "Taipei 101"
+        
+        annotation.subtitle = "Been here done that"
+        
+        annotation.coordinate = location
+        
+        map.addAnnotation(annotation)
+        
+        // General purpose for long press
+        let uilpgr = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPress(gestureRecognizer:)))
+        
+        uilpgr.minimumPressDuration = 2
+        
+        map.addGestureRecognizer(uilpgr)
+        
+    }
+    
+    // here the colon becomes important. If we did not have the colon, the method would still be called, but no information would be sent along with it. The colon allows data of where the press occurred on the screen to be sent to the function below as the gestureRecongizer parameter.
+    @objc func longPress(gestureRecognizer: UIGestureRecognizer) {
+        //self.map because we are in an enclosure and not in the viewDidLoad
+        let touchPoint = gestureRecognizer.location(in: self.map)
+        let coordinate = map.convert(touchPoint, toCoordinateFrom: self.map)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = "New place"
+        annotation.subtitle = "Maybe I'll go here too"
+        map.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {
