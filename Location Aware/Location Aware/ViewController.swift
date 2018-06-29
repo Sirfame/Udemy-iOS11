@@ -13,12 +13,14 @@ import MapKit
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     var locationManager = CLLocationManager()
-
-    
+    @IBOutlet var latitudeLabel: UILabel!
+    @IBOutlet var longitudeLabel: UILabel!
+    @IBOutlet var courseLabel: UILabel!
+    @IBOutlet var speedLabel: UILabel!
+    @IBOutlet var altitudeLabel: UILabel!
     @IBOutlet var subThoroughFareAndThoroughFareLabel: UILabel!
     @IBOutlet var subLocalityLabel: UILabel!
     @IBOutlet var subAdministrivtiveAreaAndPostalCodeLabel: UILabel!
-    
     @IBOutlet var countryLabel: UILabel!
     
     override func viewDidLoad() {
@@ -38,10 +40,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation: CLLocation = locations[0]
         
+        latitudeLabel.text  = "Latitude:    " + String(userLocation.coordinate.latitude);
+        longitudeLabel.text = "Longitude:   " + String(userLocation.coordinate.longitude);
+        courseLabel.text    = "Course:      " + String(userLocation.course);
+        speedLabel.text     = "Speed:       " + String(userLocation.speed);
+        altitudeLabel.text  = "Altitude:    " + String(userLocation.altitude);
+        
         CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
             if error != nil {
-                print(error)
+                print(error as Any)
             } else {
+                
+                
                 if let placemark = placemarks?[0] {
                     var subThoroughfare = ""
                     if placemark.subThoroughfare != nil {
@@ -75,7 +85,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         country = placemark.country!;
                     }
                     
-                    self.subAdministrivtiveAreaAndPostalCodeLabel.text = subThoroughfare + thoroughfare;
+                    self.subThoroughFareAndThoroughFareLabel.text = String(subThoroughfare) + " " + String(thoroughfare);
                     
                     self.subLocalityLabel.text = subLocality;
                     
