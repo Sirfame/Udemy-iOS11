@@ -18,10 +18,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet var courseLabel: UILabel!
     @IBOutlet var speedLabel: UILabel!
     @IBOutlet var altitudeLabel: UILabel!
-    @IBOutlet var subThoroughFareAndThoroughFareLabel: UILabel!
-    @IBOutlet var subLocalityLabel: UILabel!
-    @IBOutlet var subAdministrivtiveAreaAndPostalCodeLabel: UILabel!
-    @IBOutlet var countryLabel: UILabel!
+
+    @IBOutlet var addressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,47 +51,50 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 
                 
                 if let placemark = placemarks?[0] {
+                    
+                    var address = "";
+                    
                     var subThoroughfare = ""
                     if placemark.subThoroughfare != nil {
                         // unwrapping placemark.subThoroughfare because we are already checking if it is nil.
                         // not using let setup because we want subThoroughfare to exist either way since we are combining in single string later on.
                         subThoroughfare = placemark.subThoroughfare!;
+                        address += subThoroughfare;
                     }
                     
                     var thoroughfare = ""
                     if placemark.thoroughfare != nil {
                         thoroughfare = placemark.thoroughfare!;
+                        address += " " + thoroughfare;
                     }
                     
                     var subLocality = ""
                     if placemark.subLocality != nil {
                         subLocality = placemark.subLocality!;
+                        address += "\n" + subLocality;
                     }
                     
                     var subAdministritiveArea = ""
                     if placemark.subAdministrativeArea != nil {
                         subAdministritiveArea = placemark.subAdministrativeArea!;
+                        address += "\n" + subAdministritiveArea;
                     }
                     
                     var postalCode = ""
                     if placemark.postalCode != nil {
                         postalCode = placemark.postalCode!;
+                        address += " " + postalCode;
                     }
                     
                     var country = ""
                     if placemark.country != nil {
                         country = placemark.country!;
+                        address += "\n" + country;
                     }
                     
-                    self.subThoroughFareAndThoroughFareLabel.text = String(subThoroughfare) + " " + String(thoroughfare);
-                    
-                    self.subLocalityLabel.text = subLocality;
-                    
-                    self.subAdministrivtiveAreaAndPostalCodeLabel.text = subAdministritiveArea + " " + postalCode;
-                    
-                    self.countryLabel.text = country;
-                    
-                    print(subThoroughfare + thoroughfare + "\n" + subLocality + "\n" + subAdministritiveArea + ", " + postalCode + "\n" + country)
+                    self.addressLabel.text = address
+                    print("***" + address)
+                    //print(subThoroughfare + thoroughfare + "\n" + subLocality + "\n" + subAdministritiveArea + ", " + postalCode + "\n" + country)
                 }
             }
         }

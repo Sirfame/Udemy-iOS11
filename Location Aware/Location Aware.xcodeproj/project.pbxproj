@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCD9480120F3A3E900AD4497 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD9480020F3A3E900AD4497 /* CoreLocation.framework */; };
 		CCFE1D6420E5217300291044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE1D6320E5217300291044 /* AppDelegate.swift */; };
 		CCFE1D6620E5217300291044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE1D6520E5217300291044 /* ViewController.swift */; };
 		CCFE1D6920E5217300291044 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFE1D6720E5217300291044 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CCD9480020F3A3E900AD4497 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CCFE1D6020E5217300291044 /* Location Aware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Location Aware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFE1D6320E5217300291044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCFE1D6520E5217300291044 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD9480120F3A3E900AD4497 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CCD947FF20F3A3E900AD4497 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCD9480020F3A3E900AD4497 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CCFE1D5720E5217300291044 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,7 @@
 				CCFE1D7720E5217500291044 /* Location AwareTests */,
 				CCFE1D8220E5217500291044 /* Location AwareUITests */,
 				CCFE1D6120E5217300291044 /* Products */,
+				CCD947FF20F3A3E900AD4497 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
