@@ -9,10 +9,14 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    var sf = "sf"
+    var activeRow = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(sirfame)
+        print(sf)
+        print(activeRow)
         // Do any additional setup after loading the view.
     }
 
