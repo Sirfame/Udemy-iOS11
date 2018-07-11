@@ -14,6 +14,7 @@
 		CC562D6620F5001E00BE831F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC562D6420F5001E00BE831F /* LaunchScreen.storyboard */; };
 		CC562D7120F5001E00BE831F /* Memorable_PlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC562D7020F5001E00BE831F /* Memorable_PlacesTests.swift */; };
 		CC562D7C20F5001E00BE831F /* Memorable_PlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC562D7B20F5001E00BE831F /* Memorable_PlacesUITests.swift */; };
+		CCD5790220F64DC800E95DF9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD5790120F64DC800E95DF9 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CC562D7720F5001E00BE831F /* Memorable PlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Memorable PlacesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC562D7B20F5001E00BE831F /* Memorable_PlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memorable_PlacesUITests.swift; sourceTree = "<group>"; };
 		CC562D7D20F5001E00BE831F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD5790120F64DC800E95DF9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CC562D6220F5001E00BE831F /* Assets.xcassets */,
 				CC562D6420F5001E00BE831F /* LaunchScreen.storyboard */,
 				CC562D6720F5001E00BE831F /* Info.plist */,
+				CCD5790120F64DC800E95DF9 /* RootViewController.swift */,
 			);
 			path = "Memorable Places";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				CC562D5E20F5001E00BE831F /* ViewController.swift in Sources */,
 				CC562D5C20F5001E00BE831F /* AppDelegate.swift in Sources */,
+				CCD5790220F64DC800E95DF9 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
