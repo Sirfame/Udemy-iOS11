@@ -10,26 +10,41 @@ import UIKit
 
 class RootViewController: UITableViewController {
     
-    @available(iOS 2.0, *)
+    var places: [String] = [];
+
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4;
+        places = UserDefaults.standard.object(forKey: "Places") as! [String];
+        print("From tableview: Count - \(places.count)" )
+        return places.count;
     }
 
-
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
-    @available(iOS 2.0, *)
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        places = UserDefaults.standard.object(forKey: "Places") as! [String];
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "\(indexPath.row) test"
+        cell.textLabel?.text = "\(places[indexPath.row])"
         return cell;
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print("test")
         // Do any additional setup after loading the view.
+        let test = UserDefaults.standard.object(forKey: "temp");
+        
+        let places = UserDefaults.standard.object(forKey: "Places");
+        if let word = test as? String {
+            print(word)
+        }
+        var empty: [String] = [];
+
+        if let placesArr = places as? [String] {
+            for place in placesArr {
+                print(place)
+            }
+        } else {
+            print("Places key not found")
+        }
     }
 
     override func didReceiveMemoryWarning() {
