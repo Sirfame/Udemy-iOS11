@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045.5999999999999" y="107.49625187406298"/>
+            <point key="canvasLocation" x="1402" y="108"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="SSA-cM-lx8">
@@ -67,11 +67,14 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="9GO-Lr-uZ7"/>
                         <barButtonItem key="rightBarButtonItem" title="+" id="NQr-yT-uGx">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="gzZ-DK-Gdf"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="ToMapSegue" id="gzZ-DK-Gdf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="PeR-yP-MBH" id="AXl-lX-KAm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjg-vK-ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

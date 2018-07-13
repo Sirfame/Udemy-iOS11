@@ -7,40 +7,67 @@
 //
 
 import UIKit
+import MapKit
 
-class RootViewController: UITableViewController {
+class RootViewController: UITableViewController, MKMapViewDelegate {
     
-    var places: [String] = [];
-
+    var places: [CLLocation] = [];
+    @IBOutlet weak var table: UITableView!
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToMapSegue" {
+            let MapViewController = segue.destination as! ViewController;
+            print("To map view controller");
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // First attempt
+        /*
+         print("Table view appeared")
+         ToDoList = UserDefaults.standard.object(forKey: "ToDoList") as? Array<String>
+         table.reloadData();
+         */
+        
+        // Second attempt
+        let StoredPlaces = UserDefaults.standard.object(forKey: "Places");
+        if let placeArray = StoredPlaces as? [CLLocation] {
+            places = StoredPlaces as! [CLLocation];
+        }
+        table.reloadData();
+    }
+    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        places = UserDefaults.standard.object(forKey: "Places") as! [String];
+        
+        let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
+        places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
+
         print("From tableview: Count - \(places.count)" )
         return places.count;
     }
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        places = UserDefaults.standard.object(forKey: "Places") as! [String];
+        let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
+        places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "\(places[indexPath.row])"
+        cell.textLabel?.text = "\(places[indexPath.row].coordinate.latitude)"
         return cell;
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("test")
         // Do any additional setup after loading the view.
-        let test = UserDefaults.standard.object(forKey: "temp");
-        
-        let places = UserDefaults.standard.object(forKey: "Places");
-        if let word = test as? String {
-            print(word)
-        }
+//        let emptyArray:[CLLocation] = [];
+//        UserDefaults.standard.set(emptyArray, forKey: "Places");
+//        
+//        let places = UserDefaults.standard.object(forKey: "Places");
+
         var empty: [String] = [];
 
-        if let placesArr = places as? [String] {
+        if let placesArr = places as? [CLLocation] {
             for place in placesArr {
-                print(place)
+                print(place.coordinate.latitude)
             }
         } else {
             print("Places key not found")

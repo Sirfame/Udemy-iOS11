@@ -12,8 +12,14 @@ import MapKit
 class ViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var map: MKMapView!
-    
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToTableSegue" {
+            let MapViewController = segue.destination as! RootViewController;
+            print("To root view controller");
+        }
+    }
     
     @objc func longPress(gestureRecognizer: UIGestureRecognizer) {
         let touchPoint = gestureRecognizer.location(in: self.map)
@@ -26,36 +32,46 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let pinLocation: CLLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude);
 
         if(gestureRecognizer.state == UIGestureRecognizerState.ended) {
-            
-            CLGeocoder().reverseGeocodeLocation(pinLocation) { (placemarks, error) in
-                if error != nil {
-                    print(error!)
-                } else {
-                    if let placemark = placemarks?[0] {
-                        var subAdministrativeArea = "";
-                        if placemark.subAdministrativeArea != nil {
-                            subAdministrativeArea = placemark.subAdministrativeArea!;
-                            print(subAdministrativeArea)
-                            
-                            
-                            if var places = UserDefaults.standard.object(forKey: "Places") as? [String] {
-                                places.append(subAdministrativeArea)
-                                print("perm storage accessed from longPress: current count - \(places.count)")
-                                UserDefaults.standard.set(places, forKey: "Places")
-                                for place in places {
-                                    print(place)
-                                }
-                            }
-                            
-                        }
-                    }
+            let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
+            if var places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [CLLocation] {
+
+                places.append(pinLocation)
+                let encodedData = NSKeyedArchiver.archivedData(withRootObject: places)
+                UserDefaults.standard.set(encodedData, forKey: "Places")
+
+
+                
+                
+                print("perm storage accessed from longPress: current count - \(places.count)")
+
+                for place in places {
+                    print(place)
                 }
             }
             
-            
+//            CLGeocoder().reverseGeocodeLocation(pinLocation) { (placemarks, error) in
+//                if error != nil {
+//                    print(error!)
+//                } else {
+//                    if let placemark = placemarks?[0] {
+//                        var subAdministrativeArea = "";
+//                        if placemark.subAdministrativeArea != nil {
+//                            subAdministrativeArea = placemark.subAdministrativeArea!;
+//                            print(subAdministrativeArea)
+//                            if var places = UserDefaults.standard.object(forKey: "Places") as? [String] {
+//                                places.append(subAdministrativeArea)
+//                                print("perm storage accessed from longPress: current count - \(places.count)")
+//                                UserDefaults.standard.set(places, forKey: "Places")
+//                                for place in places {
+//                                    print(place)
+//                                }
+//                            }
+//
+//                        }
+//                    }
+//                }
+//            }
         }
-
-        
     }
     
     override func viewDidLoad() {
