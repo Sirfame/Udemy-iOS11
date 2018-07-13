@@ -51,7 +51,24 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
         let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
         places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "\(places[indexPath.row].coordinate.latitude)"
+        var subAdministrativeArea = "";
+        CLGeocoder().reverseGeocodeLocation(places[indexPath.row]) { (placemarks, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                if let placemark = placemarks?[0] {
+                    
+                    if placemark.subAdministrativeArea != nil {
+                        subAdministrativeArea = placemark.subAdministrativeArea!;
+                        cell.textLabel?.text = "\(subAdministrativeArea)"
+                    } else {
+                        cell.textLabel?.text = "Location temporarily unavailable"
+                    }
+                }
+            }
+        }
+        
+        
         return cell;
     }
 
@@ -60,7 +77,7 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
 //        let emptyArray:[CLLocation] = [];
 //        UserDefaults.standard.set(emptyArray, forKey: "Places");
-//        
+//
 //        let places = UserDefaults.standard.object(forKey: "Places");
 
         var empty: [String] = [];
