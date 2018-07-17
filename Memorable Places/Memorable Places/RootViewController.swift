@@ -23,25 +23,38 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // First attempt
-        /*
-         print("Table view appeared")
-         ToDoList = UserDefaults.standard.object(forKey: "ToDoList") as? Array<String>
-         table.reloadData();
-         */
-        
-        // Second attempt
-        let StoredPlaces = UserDefaults.standard.object(forKey: "Places");
-        if let placeArray = StoredPlaces as? [CLLocation] {
-            places = StoredPlaces as! [CLLocation];
+        let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
+        places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
+        if let storedPlaces = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [CLLocation] {
+            places = storedPlaces
         }
         table.reloadData();
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            places.remove(at: indexPath.row);
+            let encodedData = NSKeyedArchiver.archivedData(withRootObject: places)
+            UserDefaults.standard.set(encodedData, forKey: "Places")
+            table.reloadData();
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAt indexPath: NSIndexPath) {
+        print(indexPath.row)
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
         places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
+        if let storedPlaces = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [CLLocation] {
+            places = storedPlaces
+        }
 
         print("From tableview: Count - \(places.count)" )
         return places.count;
@@ -50,6 +63,9 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
         places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
+        if let storedPlaces = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [CLLocation] {
+            places = storedPlaces
+        }
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         var subAdministrativeArea = "";
         CLGeocoder().reverseGeocodeLocation(places[indexPath.row]) { (placemarks, error) in
@@ -80,14 +96,10 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
 //
 //        let places = UserDefaults.standard.object(forKey: "Places");
 
-        var empty: [String] = [];
-
-        if let placesArr = places as? [CLLocation] {
-            for place in placesArr {
-                print(place.coordinate.latitude)
-            }
-        } else {
-            print("Places key not found")
+        let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
+        places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
+        if let storedPlaces = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [CLLocation] {
+            places = storedPlaces
         }
     }
 
