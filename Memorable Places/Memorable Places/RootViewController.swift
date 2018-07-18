@@ -16,10 +16,29 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ToMapSegue" {
+        if segue.identifier == "ToSavedLocationSegue" {
             let MapViewController = segue.destination as! ViewController;
-            print("To map view controller");
+            //MapViewController.map.centerCoordinate.latitude
+            MapViewController.latitude = latitude
+            MapViewController.longitude = longitude
+            MapViewController.pinTitle = pinTitle;
+            print("To map view controller \(latitude) \(longitude) \(pinTitle)");
         }
+    }
+    
+    var pinTitle:String!
+    var latitude:CLLocationDegrees!;
+    var longitude:CLLocationDegrees!;
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+        latitude = places[indexPath.row].coordinate.latitude;
+        longitude = places[indexPath.row].coordinate.longitude;
+        pinTitle = currentCell.textLabel?.text
+        performSegue(withIdentifier: "ToSavedLocationSegue", sender: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,13 +68,11 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
         places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
         if let storedPlaces = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [CLLocation] {
             places = storedPlaces
         }
-
         print("From tableview: Count - \(places.count)" )
         return places.count;
     }
@@ -73,7 +90,6 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
                 print(error!)
             } else {
                 if let placemark = placemarks?[0] {
-                    
                     if placemark.subAdministrativeArea != nil {
                         subAdministrativeArea = placemark.subAdministrativeArea!;
                         cell.textLabel?.text = "\(subAdministrativeArea)"
@@ -83,19 +99,12 @@ class RootViewController: UITableViewController, MKMapViewDelegate {
                 }
             }
         }
-        
-        
         return cell;
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        let emptyArray:[CLLocation] = [];
-//        UserDefaults.standard.set(emptyArray, forKey: "Places");
-//
-//        let places = UserDefaults.standard.object(forKey: "Places");
-
         let decoded  = UserDefaults.standard.object(forKey: "Places") as! Data
         places = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [CLLocation]
         if let storedPlaces = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [CLLocation] {

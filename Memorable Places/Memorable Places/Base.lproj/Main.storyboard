@@ -55,9 +55,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="rtT-vf-Q1H"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -77,6 +74,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="table" destination="PeR-yP-MBH" id="AXl-lX-KAm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToSavedLocationSegue" id="qvb-gq-Qn7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjg-vK-ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,6 +99,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rtT-vf-Q1H"/>
+        <segue reference="qvb-gq-Qn7"/>
     </inferredMetricsTieBreakers>
 </document>

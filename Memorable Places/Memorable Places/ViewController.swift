@@ -12,7 +12,27 @@ import MapKit
 class ViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var map: MKMapView!
-
+    
+    var longitude: CLLocationDegrees = 0;
+    var latitude: CLLocationDegrees = 0;
+    var pinTitle: String = "";
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewdidAppear \(longitude) \(latitude) \(pinTitle)")
+        if longitude != 0 && latitude != 0 && pinTitle != "" {
+            let pinLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude);
+            let latDelta: CLLocationDegrees = 0.05;
+            let longDelta: CLLocationDegrees = 0.05;
+            let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
+            let region: MKCoordinateRegion = MKCoordinateRegion(center: pinLocation, span: span)
+            map.setRegion(region, animated: true)
+            let annotation = MKPointAnnotation();
+            annotation.title = pinTitle;
+            annotation.coordinate = pinLocation;
+            annotation.subtitle = "Been here!"
+            map.addAnnotation(annotation);
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToTableSegue" {
@@ -38,10 +58,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 places.append(pinLocation)
                 let encodedData = NSKeyedArchiver.archivedData(withRootObject: places)
                 UserDefaults.standard.set(encodedData, forKey: "Places")
-
-
-                
-                
                 print("perm storage accessed from longPress: current count - \(places.count)")
 
                 for place in places {
