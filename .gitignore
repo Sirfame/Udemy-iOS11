@@ -1,5 +1,6 @@
 .idea
 .DS_Store
+.mp3
 # Build and Release Folders
 bin/
 bin-debug/
