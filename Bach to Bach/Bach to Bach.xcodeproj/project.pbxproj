@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC10337321061A54001DA257 /* bach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC10337221061A54001DA257 /* bach.mp3 */; };
+		CC10337521061B31001DA257 /* bachPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC10337421061B30001DA257 /* bachPic.jpg */; };
+		CC9C596C2103D059000554AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C596B2103D059000554AB /* AppDelegate.swift */; };
+		CC9C596E2103D059000554AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C596D2103D059000554AB /* ViewController.swift */; };
+		CC9C59712103D059000554AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9C596F2103D059000554AB /* Main.storyboard */; };
+		CC9C59732103D05A000554AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9C59722103D05A000554AB /* Assets.xcassets */; };
+		CC9C59762103D05A000554AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9C59742103D05A000554AB /* LaunchScreen.storyboard */; };
+		CC9C59812103D05A000554AB /* Bach_to_BachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C59802103D05A000554AB /* Bach_to_BachTests.swift */; };
+		CC9C598C2103D05A000554AB /* Bach_to_BachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C598B2103D05A000554AB /* Bach_to_BachUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC9C597D2103D05A000554AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9C59602103D059000554AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9C59672103D059000554AB;
+			remoteInfo = "Bach to Bach";
+		};
+		CC9C59882103D05A000554AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9C59602103D059000554AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9C59672103D059000554AB;
+			remoteInfo = "Bach to Bach";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC10337221061A54001DA257 /* bach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bach.mp3; path = "../../Audio Player/Audio Player/bach.mp3"; sourceTree = "<group>"; };
+		CC10337421061B30001DA257 /* bachPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bachPic.jpg; sourceTree = "<group>"; };
+		CC9C59682103D059000554AB /* Bach to Bach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bach to Bach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9C596B2103D059000554AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC9C596D2103D059000554AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC9C59702103D059000554AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC9C59722103D05A000554AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC9C59752103D05A000554AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC9C59772103D05A000554AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9C597C2103D05A000554AB /* Bach to BachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bach to BachTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9C59802103D05A000554AB /* Bach_to_BachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bach_to_BachTests.swift; sourceTree = "<group>"; };
+		CC9C59822103D05A000554AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9C59872103D05A000554AB /* Bach to BachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bach to BachUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9C598B2103D05A000554AB /* Bach_to_BachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bach_to_BachUITests.swift; sourceTree = "<group>"; };
+		CC9C598D2103D05A000554AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC9C59652103D059000554AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C59792103D05A000554AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C59842103D05A000554AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC9C595F2103D059000554AB = {
+			isa = PBXGroup;
+			children = (
+				CC9C596A2103D059000554AB /* Bach to Bach */,
+				CC9C597F2103D05A000554AB /* Bach to BachTests */,
+				CC9C598A2103D05A000554AB /* Bach to BachUITests */,
+				CC9C59692103D059000554AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC9C59692103D059000554AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C59682103D059000554AB /* Bach to Bach.app */,
+				CC9C597C2103D05A000554AB /* Bach to BachTests.xctest */,
+				CC9C59872103D05A000554AB /* Bach to BachUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC9C596A2103D059000554AB /* Bach to Bach */ = {
+			isa = PBXGroup;
+			children = (
+				CC10337421061B30001DA257 /* bachPic.jpg */,
+				CC9C596B2103D059000554AB /* AppDelegate.swift */,
+				CC9C596D2103D059000554AB /* ViewController.swift */,
+				CC9C596F2103D059000554AB /* Main.storyboard */,
+				CC10337221061A54001DA257 /* bach.mp3 */,
+				CC9C59722103D05A000554AB /* Assets.xcassets */,
+				CC9C59742103D05A000554AB /* LaunchScreen.storyboard */,
+				CC9C59772103D05A000554AB /* Info.plist */,
+			);
+			path = "Bach to Bach";
+			sourceTree = "<group>";
+		};
+		CC9C597F2103D05A000554AB /* Bach to BachTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C59802103D05A000554AB /* Bach_to_BachTests.swift */,
+				CC9C59822103D05A000554AB /* Info.plist */,
+			);
+			path = "Bach to BachTests";
+			sourceTree = "<group>";
+		};
+		CC9C598A2103D05A000554AB /* Bach to BachUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C598B2103D05A000554AB /* Bach_to_BachUITests.swift */,
+				CC9C598D2103D05A000554AB /* Info.plist */,
+			);
+			path = "Bach to BachUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC9C59672103D059000554AB /* Bach to Bach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9C59902103D05A000554AB /* Build configuration list for PBXNativeTarget "Bach to Bach" */;
+			buildPhases = (
+				CC9C59642103D059000554AB /* Sources */,
+				CC9C59652103D059000554AB /* Frameworks */,
+				CC9C59662103D059000554AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bach to Bach";
+			productName = "Bach to Bach";
+			productReference = CC9C59682103D059000554AB /* Bach to Bach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC9C597B2103D05A000554AB /* Bach to BachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9C59932103D05A000554AB /* Build configuration list for PBXNativeTarget "Bach to BachTests" */;
+			buildPhases = (
+				CC9C59782103D05A000554AB /* Sources */,
+				CC9C59792103D05A000554AB /* Frameworks */,
+				CC9C597A2103D05A000554AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9C597E2103D05A000554AB /* PBXTargetDependency */,
+			);
+			name = "Bach to BachTests";
+			productName = "Bach to BachTests";
+			productReference = CC9C597C2103D05A000554AB /* Bach to BachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC9C59862103D05A000554AB /* Bach to BachUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9C59962103D05A000554AB /* Build configuration list for PBXNativeTarget "Bach to BachUITests" */;
+			buildPhases = (
+				CC9C59832103D05A000554AB /* Sources */,
+				CC9C59842103D05A000554AB /* Frameworks */,
+				CC9C59852103D05A000554AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9C59892103D05A000554AB /* PBXTargetDependency */,
+			);
+			name = "Bach to BachUITests";
+			productName = "Bach to BachUITests";
+			productReference = CC9C59872103D05A000554AB /* Bach to BachUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC9C59602103D059000554AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Sirfame Lin";
+				TargetAttributes = {
+					CC9C59672103D059000554AB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					CC9C597B2103D05A000554AB = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CC9C59672103D059000554AB;
+					};
+					CC9C59862103D05A000554AB = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CC9C59672103D059000554AB;
+					};
+				};
+			};
+			buildConfigurationList = CC9C59632103D059000554AB /* Build configuration list for PBXProject "Bach to Bach" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC9C595F2103D059000554AB;
+			productRefGroup = CC9C59692103D059000554AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC9C59672103D059000554AB /* Bach to Bach */,
+				CC9C597B2103D05A000554AB /* Bach to BachTests */,
+				CC9C59862103D05A000554AB /* Bach to BachUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC9C59662103D059000554AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC10337321061A54001DA257 /* bach.mp3 in Resources */,
+				CC9C59762103D05A000554AB /* LaunchScreen.storyboard in Resources */,
+				CC9C59732103D05A000554AB /* Assets.xcassets in Resources */,
+				CC9C59712103D059000554AB /* Main.storyboard in Resources */,
+				CC10337521061B31001DA257 /* bachPic.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C597A2103D05A000554AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C59852103D05A000554AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC9C59642103D059000554AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9C596E2103D059000554AB /* ViewController.swift in Sources */,
+				CC9C596C2103D059000554AB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C59782103D05A000554AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9C59812103D05A000554AB /* Bach_to_BachTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C59832103D05A000554AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9C598C2103D05A000554AB /* Bach_to_BachUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC9C597E2103D05A000554AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9C59672103D059000554AB /* Bach to Bach */;
+			targetProxy = CC9C597D2103D05A000554AB /* PBXContainerItemProxy */;
+		};
+		CC9C59892103D05A000554AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9C59672103D059000554AB /* Bach to Bach */;
+			targetProxy = CC9C59882103D05A000554AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC9C596F2103D059000554AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9C59702103D059000554AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC9C59742103D05A000554AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9C59752103D05A000554AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC9C598E2103D05A000554AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC9C598F2103D05A000554AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC9C59912103D05A000554AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Bach to Bach/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Bach-to-Bach";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC9C59922103D05A000554AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Bach to Bach/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Bach-to-Bach";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC9C59942103D05A000554AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Bach to BachTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Bach-to-BachTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bach to Bach.app/Bach to Bach";
+			};
+			name = Debug;
+		};
+		CC9C59952103D05A000554AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Bach to BachTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Bach-to-BachTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bach to Bach.app/Bach to Bach";
+			};
+			name = Release;
+		};
+		CC9C59972103D05A000554AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Bach to BachUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Bach-to-BachUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bach to Bach";
+			};
+			name = Debug;
+		};
+		CC9C59982103D05A000554AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Bach to BachUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Bach-to-BachUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bach to Bach";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC9C59632103D059000554AB /* Build configuration list for PBXProject "Bach to Bach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9C598E2103D05A000554AB /* Debug */,
+				CC9C598F2103D05A000554AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9C59902103D05A000554AB /* Build configuration list for PBXNativeTarget "Bach to Bach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9C59912103D05A000554AB /* Debug */,
+				CC9C59922103D05A000554AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9C59932103D05A000554AB /* Build configuration list for PBXNativeTarget "Bach to BachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9C59942103D05A000554AB /* Debug */,
+				CC9C59952103D05A000554AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9C59962103D05A000554AB /* Build configuration list for PBXNativeTarget "Bach to BachUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9C59972103D05A000554AB /* Debug */,
+				CC9C59982103D05A000554AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC9C59602103D059000554AB /* Project object */;
+}
