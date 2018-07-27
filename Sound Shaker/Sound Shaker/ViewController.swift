@@ -12,11 +12,10 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var player = AVAudioPlayer()
-    var audioArray: Array<String> = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioArray = ["arrow", "autohandgun", "radio", "revolver", "rifle", "shotgun", "shotgunshot", "whip"]
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -27,6 +26,7 @@ class ViewController: UIViewController {
     }
     
     func playRandom() {
+        let audioArray = ["arrow", "autohandgun", "radio", "revolver", "rifle", "shotgun", "shotgunshot", "whip"]
         let number = arc4random_uniform(UInt32(audioArray.count))
         let audioPath = Bundle.main.path(forResource: audioArray[Int(number)], ofType: "mp3")
         do {
