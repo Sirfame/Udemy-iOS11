@@ -17,18 +17,26 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
+        /*
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
-        newUser.setValue("sf2", forKey: "username")
+        newUser.setValue("ralphie", forKey: "username")
         newUser.setValue("pass", forKey: "password")
-        newUser.setValue(24, forKey: "age")
+        newUser.setValue(2, forKey: "age")
+ 
         do {
             try context.save()
             print("saved")
         } catch {
             print("there was an error")
         }
+         */
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users") // sort of like an array
+        
+        // filtering the value returned from the request with NSPredicate
+        // instruction to look for certain data with certain properties
+        // name = %@ (objc) means we are looking for a string. Any object
+        // request.predicate = NSPredicate(format: "username = %@", "dooley") // look for name = something, where that something is kirsten. looking for a particular value (kirsten) within the field username. Google NSPredicate format for comparisons.
         
         request.returnsObjectsAsFaults = false; // instead of returning the actual values from the db, it wil return faults. userful when testing the strucutre of the db, but not the results themselves.
         do {
@@ -36,6 +44,21 @@ class ViewController: UIViewController {
             if results.count > 0 {
                 for result in results as! [NSManagedObject] { // we need to cast the results object as an array of NSManagedObject results will have a type of NSFetchRequestResult which will always be castable to NSManagedObject which means that we can safetly force cast.
                     if let username = result.value(forKey: "username") as? String {
+                        // delete an existing value
+                        context.delete(result)
+                        do {
+                            try context.save();
+                        } catch {
+                            print("rename failed")
+                        }
+                        // updating an existing value
+//                        result.setValue("dooley", forKey: "username")
+//                        
+//                        do {
+//                            try context.save();
+//                        } catch {
+//                            print("rename failed")
+//                        }
                         print(username)
                     }
                 }
