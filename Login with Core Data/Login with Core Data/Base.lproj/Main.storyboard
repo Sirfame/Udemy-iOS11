@@ -45,13 +45,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-hb-SY6">
+                                <rect key="frame" x="163" y="394" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="LcI-Sr-gSv"/>
+                                    <constraint firstAttribute="height" constant="30" id="fTx-VC-vFM"/>
+                                </constraints>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGq-bp-Abe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9X-XI-rec">
+                                <rect key="frame" x="125" y="445" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="60e-ZP-sC6"/>
+                                    <constraint firstAttribute="width" constant="125" id="mIS-ed-bzH"/>
+                                </constraints>
+                                <state key="normal" title="Change username"/>
+                                <connections>
+                                    <action selector="changeUsernameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4P4-wT-YfO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rAV-Vk-zfF" firstAttribute="top" secondItem="eo3-as-SJN" secondAttribute="bottom" constant="8" id="2wc-UW-8or"/>
                             <constraint firstItem="eo3-as-SJN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="245" id="6IS-Qz-dIC"/>
+                            <constraint firstItem="z9X-XI-rec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEC-hc-RUj"/>
+                            <constraint firstItem="qFn-hb-SY6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hxy-fZ-kYs"/>
                             <constraint firstItem="dGG-ng-Syo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OJB-fq-d2h"/>
+                            <constraint firstItem="z9X-XI-rec" firstAttribute="top" secondItem="qFn-hb-SY6" secondAttribute="bottom" constant="21" id="PeK-cN-Rbw"/>
                             <constraint firstItem="eo3-as-SJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QBY-v5-zRd"/>
+                            <constraint firstItem="qFn-hb-SY6" firstAttribute="top" secondItem="rAV-Vk-zfF" secondAttribute="bottom" constant="61" id="TM4-m3-eI2"/>
                             <constraint firstItem="rAV-Vk-zfF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WTt-wK-XOA"/>
                             <constraint firstItem="eo3-as-SJN" firstAttribute="top" secondItem="dGG-ng-Syo" secondAttribute="bottom" constant="47" id="Yqd-Oj-94Y"/>
                             <constraint firstItem="dGG-ng-Syo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="vg8-rP-tnG"/>
@@ -60,8 +86,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="changeUsername" destination="z9X-XI-rec" id="CaV-PB-Xiq"/>
                         <outlet property="displayUsername" destination="dGG-ng-Syo" id="oxW-x9-JaI"/>
                         <outlet property="login" destination="rAV-Vk-zfF" id="Ozw-nf-80w"/>
+                        <outlet property="logout" destination="qFn-hb-SY6" id="sYa-nR-z9N"/>
                         <outlet property="usernameField" destination="eo3-as-SJN" id="HdG-LN-Oqm"/>
                     </connections>
                 </viewController>
