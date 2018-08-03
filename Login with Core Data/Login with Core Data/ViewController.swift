@@ -11,63 +11,28 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    
-    @IBOutlet var changeUsername: UIButton!
-    @IBAction func changeUsernameButton(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users") // sort of like an array
-        request.returnsObjectsAsFaults = false;
-        do {
-            let results = try context.fetch(request)
-            if results.count > 0 {
-                for result in results as! [NSManagedObject] {
-                    if var username = result.value(forKey:"username") as? String {
-                        result.setValue(usernameField.text, forKey: "username")
-                        username = result.value(forKey:"username") as! String
-                        do {
-                            try context.save();
-                            print("username updated successfully")
-                            
-                            displayUsername.text = "Hello \(username)"
-                        } catch {
-                            print("update failed")
-                        }
-                        
-                    }
-                }
-            } else {
-                displayUsername.text = "Please login"
-            }
-        } catch {
-            print("There was an error.")
-        }
-    }
+    var isLoggedIn = false;
+
     @IBOutlet var logout: UIButton!
     @IBAction func logoutButton(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users") // sort of like an array
-        request.returnsObjectsAsFaults = false;
-        
-        
+        request.returnsObjectsAsFaults = false; // we dont need this because we dont care what the username is, since we are just going to delete it.
         do {
             let results = try context.fetch(request)
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
-                    if let username = result.value(forKey:"username") as? String {
-                        context.delete(result)
-                        do {
-                            try context.save();
-                            print("logged out (deleted) successfully")
-                            login.alpha = 1;
-                            logout.alpha = 0;
-                            changeUsername.alpha = 0;
-                            displayUsername.text = "Please login"
-                        } catch {
-                            print("logout (delete) failed")
-                        }
-                        
+                    context.delete(result)
+                    do {
+                        try context.save();
+                        print("logged out (deleted) successfully")
+                        login.setTitle("Login", for: [])
+                        logout.alpha = 0;
+                        displayUsername.text = "Please login"
+                        isLoggedIn = false;
+                    } catch {
+                        print("logout (delete) failed")
                     }
                 }
             } else {
@@ -76,8 +41,6 @@ class ViewController: UIViewController {
         } catch {
             print("There was an error.")
         }
-        
-        
     }
     @IBOutlet var login: UIButton!
     @IBOutlet var displayUsername: UILabel!
@@ -86,16 +49,43 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newUsername = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
-        newUsername.setValue(usernameField.text, forKey: "username")
-        do {
-            try context.save()
-            print("saved")
-            login.alpha = 0;
-            logout.alpha = 1;
-            changeUsername.alpha = 1;
-            displayUsername.text = "Hello " + usernameField.text!
-        } catch {
-            print("There was an error.")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users") // sort of like an array
+        if isLoggedIn {
+            do {
+                let results = try context.fetch(request)
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        if var username = result.value(forKey:"username") as? String {
+                            result.setValue(usernameField.text, forKey: "username")
+                            username = result.value(forKey:"username") as! String
+                            do {
+                                try context.save();
+                                print("username updated successfully")
+                                
+                                displayUsername.text = "Hello \(username)"
+                            } catch {
+                                print("update failed")
+                            }
+                        }
+                    }
+                } else {
+                    displayUsername.text = "Please login"
+                }
+            } catch {
+                print("There was an error.")
+            }
+        } else {
+            newUsername.setValue(usernameField.text, forKey: "username")
+            do {
+                try context.save()
+                print("saved")
+                logout.alpha = 1;
+                displayUsername.text = "Hello " + usernameField.text!
+                login.setTitle("Update username", for: [])
+                isLoggedIn = true;
+            } catch {
+                print("There was an error.")
+            }
         }
     }
     override func viewDidLoad() {
@@ -104,28 +94,15 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Users")
-        
-        // uncomment below to clear Core Data
-//        let DelAllReqVar = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "Users"))
-//        do {
-//            try context.execute(DelAllReqVar)
-//        }
-//        catch {
-//            print(error)
-//        }
-    
-        
-        
-        request.returnsObjectsAsFaults = false;
         do {
             let results = try context.fetch(request)
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
                     if let username = result.value(forKey:"username") as? String {
-                        login.alpha = 0;
+                        login.setTitle("Update username", for: []) // empty array for default control set.
                         logout.alpha = 1;
-                        changeUsername.alpha = 1;
                         displayUsername.text = "Hello \(username)"
+                        isLoggedIn = true;
                     }
                 }
             } else {
