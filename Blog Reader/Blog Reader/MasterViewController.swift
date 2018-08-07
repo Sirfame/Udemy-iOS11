@@ -27,7 +27,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        var url = URL(string: "https://www.googleapis.com/blogger/v3/blogs/3213900/posts?key=AIzaSyDzPY182uEUmrNRtNL_dhcxzdRgtHlHO1k")!;
+        var url = URL(string: "https://www.googleapis.com/blogger/v3/blogs/3213900/posts?key=")!;
         
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if error != nil {

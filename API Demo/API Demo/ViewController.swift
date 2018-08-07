@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
     @IBAction func submit(_ sender: Any) {
-        if let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=" + textField.text!.replacingOccurrences(of: " ", with: "%20") + "&appid=b4e281908a07641483fda6c5ccc75a5d") {
+        if let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=" + textField.text!.replacingOccurrences(of: " ", with: "%20") + "&appid=") {
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if error != nil {
                     print(error)
