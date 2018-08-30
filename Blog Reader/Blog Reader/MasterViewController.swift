@@ -35,12 +35,35 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                         
                         if let blogArray = jsonResult["items"] as? NSArray {
                             
+                            let context = self.fetchedResultsController.managedObjectContext
+                            
+                            let request = NSFetchRequest<Event>(entityName: "Event")
+                            
+                            do {
+                                let results = try context.fetch(request)
+                                
+                                if results.count > 0 {
+                                    for result in results {
+                                        
+                                        context.delete(result)
+                                        
+                                        do {
+                                            try context.save();
+                                        } catch {
+                                            print("Specific delete failed")
+                                        }
+                                    }
+                                }
+                            } catch {
+                                print("Delete failed")
+                            }
+                            
                             for item in blogArray as [AnyObject] {
                                 print(item["published"])
                                 print(item["title"])
                                 print(item["content"])
                                 
-                                let context = self.fetchedResultsController.managedObjectContext
+                                
                                 let newEvent = Event(context: context)
                                 
                                 // If appropriate, configure the new managed object.
@@ -159,7 +182,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "published", ascending: false)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
