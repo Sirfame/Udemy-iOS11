@@ -14,15 +14,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var gameScore = PFObject(className:"GameScore")
-        gameScore["score"] = 1337
-        gameScore["playerName"] = "Sean Plott"
-        gameScore["cheatMode"] = false
-        gameScore.saveInBackground {(success, error) in
+        /*
+        let comment = PFObject(className: "Comment")
+        
+        comment["text"] = "Nice shot!"
+        
+        comment.saveInBackground { (success, error) in
             if(success) {
-                print("success")
+                print("Save successful")
             } else {
-                print("failed")
+                print("Save failed")
+            }
+        }
+        */
+        
+        let query = PFQuery(className: "Comment")
+        query.getObjectInBackground(withId: "Ihz0DTrZGX") { (object, error) in
+            if let comment = object {
+                if let text = comment["text"] {
+                    print(text)
+                }
+                comment["text"] = "awful shot"
+                comment.saveInBackground(block: { (success, error) in
+                    if(success) {
+                        print("Comment change successful")
+                    } else {
+                        print("Comment change failed")
+                    }
+                })
             }
         }
     }
