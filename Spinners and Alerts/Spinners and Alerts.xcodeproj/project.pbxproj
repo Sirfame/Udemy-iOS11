@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC674D9D2172A5D3005D6FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC674D9C2172A5D3005D6FA4 /* AppDelegate.swift */; };
+		CC674D9F2172A5D3005D6FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC674D9E2172A5D3005D6FA4 /* ViewController.swift */; };
+		CC674DA22172A5D3005D6FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC674DA02172A5D3005D6FA4 /* Main.storyboard */; };
+		CC674DA52172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC674DA32172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodeld */; };
+		CC674DA72172A5D3005D6FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC674DA62172A5D3005D6FA4 /* Assets.xcassets */; };
+		CC674DAA2172A5D3005D6FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC674DA82172A5D3005D6FA4 /* LaunchScreen.storyboard */; };
+		CC674DB52172A5D3005D6FA4 /* Spinners_and_AlertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC674DB42172A5D3005D6FA4 /* Spinners_and_AlertsTests.swift */; };
+		CC674DC02172A5D3005D6FA4 /* Spinners_and_AlertsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC674DBF2172A5D3005D6FA4 /* Spinners_and_AlertsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC674DB12172A5D3005D6FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC674D912172A5D3005D6FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC674D982172A5D3005D6FA4;
+			remoteInfo = "Spinners and Alerts";
+		};
+		CC674DBC2172A5D3005D6FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC674D912172A5D3005D6FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC674D982172A5D3005D6FA4;
+			remoteInfo = "Spinners and Alerts";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC674D992172A5D3005D6FA4 /* Spinners and Alerts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spinners and Alerts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC674D9C2172A5D3005D6FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC674D9E2172A5D3005D6FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC674DA12172A5D3005D6FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC674DA42172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spinners_and_Alerts.xcdatamodel; sourceTree = "<group>"; };
+		CC674DA62172A5D3005D6FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC674DA92172A5D3005D6FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC674DAB2172A5D3005D6FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC674DB02172A5D3005D6FA4 /* Spinners and AlertsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spinners and AlertsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC674DB42172A5D3005D6FA4 /* Spinners_and_AlertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinners_and_AlertsTests.swift; sourceTree = "<group>"; };
+		CC674DB62172A5D3005D6FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC674DBB2172A5D3005D6FA4 /* Spinners and AlertsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spinners and AlertsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC674DBF2172A5D3005D6FA4 /* Spinners_and_AlertsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinners_and_AlertsUITests.swift; sourceTree = "<group>"; };
+		CC674DC12172A5D3005D6FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC674D962172A5D3005D6FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC674DAD2172A5D3005D6FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC674DB82172A5D3005D6FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC674D902172A5D3005D6FA4 = {
+			isa = PBXGroup;
+			children = (
+				CC674D9B2172A5D3005D6FA4 /* Spinners and Alerts */,
+				CC674DB32172A5D3005D6FA4 /* Spinners and AlertsTests */,
+				CC674DBE2172A5D3005D6FA4 /* Spinners and AlertsUITests */,
+				CC674D9A2172A5D3005D6FA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC674D9A2172A5D3005D6FA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC674D992172A5D3005D6FA4 /* Spinners and Alerts.app */,
+				CC674DB02172A5D3005D6FA4 /* Spinners and AlertsTests.xctest */,
+				CC674DBB2172A5D3005D6FA4 /* Spinners and AlertsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC674D9B2172A5D3005D6FA4 /* Spinners and Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				CC674D9C2172A5D3005D6FA4 /* AppDelegate.swift */,
+				CC674D9E2172A5D3005D6FA4 /* ViewController.swift */,
+				CC674DA02172A5D3005D6FA4 /* Main.storyboard */,
+				CC674DA62172A5D3005D6FA4 /* Assets.xcassets */,
+				CC674DA82172A5D3005D6FA4 /* LaunchScreen.storyboard */,
+				CC674DAB2172A5D3005D6FA4 /* Info.plist */,
+				CC674DA32172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodeld */,
+			);
+			path = "Spinners and Alerts";
+			sourceTree = "<group>";
+		};
+		CC674DB32172A5D3005D6FA4 /* Spinners and AlertsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC674DB42172A5D3005D6FA4 /* Spinners_and_AlertsTests.swift */,
+				CC674DB62172A5D3005D6FA4 /* Info.plist */,
+			);
+			path = "Spinners and AlertsTests";
+			sourceTree = "<group>";
+		};
+		CC674DBE2172A5D3005D6FA4 /* Spinners and AlertsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC674DBF2172A5D3005D6FA4 /* Spinners_and_AlertsUITests.swift */,
+				CC674DC12172A5D3005D6FA4 /* Info.plist */,
+			);
+			path = "Spinners and AlertsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC674D982172A5D3005D6FA4 /* Spinners and Alerts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC674DC42172A5D3005D6FA4 /* Build configuration list for PBXNativeTarget "Spinners and Alerts" */;
+			buildPhases = (
+				CC674D952172A5D3005D6FA4 /* Sources */,
+				CC674D962172A5D3005D6FA4 /* Frameworks */,
+				CC674D972172A5D3005D6FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spinners and Alerts";
+			productName = "Spinners and Alerts";
+			productReference = CC674D992172A5D3005D6FA4 /* Spinners and Alerts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC674DAF2172A5D3005D6FA4 /* Spinners and AlertsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC674DC72172A5D3005D6FA4 /* Build configuration list for PBXNativeTarget "Spinners and AlertsTests" */;
+			buildPhases = (
+				CC674DAC2172A5D3005D6FA4 /* Sources */,
+				CC674DAD2172A5D3005D6FA4 /* Frameworks */,
+				CC674DAE2172A5D3005D6FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC674DB22172A5D3005D6FA4 /* PBXTargetDependency */,
+			);
+			name = "Spinners and AlertsTests";
+			productName = "Spinners and AlertsTests";
+			productReference = CC674DB02172A5D3005D6FA4 /* Spinners and AlertsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC674DBA2172A5D3005D6FA4 /* Spinners and AlertsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC674DCA2172A5D3005D6FA4 /* Build configuration list for PBXNativeTarget "Spinners and AlertsUITests" */;
+			buildPhases = (
+				CC674DB72172A5D3005D6FA4 /* Sources */,
+				CC674DB82172A5D3005D6FA4 /* Frameworks */,
+				CC674DB92172A5D3005D6FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC674DBD2172A5D3005D6FA4 /* PBXTargetDependency */,
+			);
+			name = "Spinners and AlertsUITests";
+			productName = "Spinners and AlertsUITests";
+			productReference = CC674DBB2172A5D3005D6FA4 /* Spinners and AlertsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC674D912172A5D3005D6FA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Sirfame Lin";
+				TargetAttributes = {
+					CC674D982172A5D3005D6FA4 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					CC674DAF2172A5D3005D6FA4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = CC674D982172A5D3005D6FA4;
+					};
+					CC674DBA2172A5D3005D6FA4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = CC674D982172A5D3005D6FA4;
+					};
+				};
+			};
+			buildConfigurationList = CC674D942172A5D3005D6FA4 /* Build configuration list for PBXProject "Spinners and Alerts" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC674D902172A5D3005D6FA4;
+			productRefGroup = CC674D9A2172A5D3005D6FA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC674D982172A5D3005D6FA4 /* Spinners and Alerts */,
+				CC674DAF2172A5D3005D6FA4 /* Spinners and AlertsTests */,
+				CC674DBA2172A5D3005D6FA4 /* Spinners and AlertsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC674D972172A5D3005D6FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC674DAA2172A5D3005D6FA4 /* LaunchScreen.storyboard in Resources */,
+				CC674DA72172A5D3005D6FA4 /* Assets.xcassets in Resources */,
+				CC674DA22172A5D3005D6FA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC674DAE2172A5D3005D6FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC674DB92172A5D3005D6FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC674D952172A5D3005D6FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC674D9F2172A5D3005D6FA4 /* ViewController.swift in Sources */,
+				CC674DA52172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodeld in Sources */,
+				CC674D9D2172A5D3005D6FA4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC674DAC2172A5D3005D6FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC674DB52172A5D3005D6FA4 /* Spinners_and_AlertsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC674DB72172A5D3005D6FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC674DC02172A5D3005D6FA4 /* Spinners_and_AlertsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC674DB22172A5D3005D6FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC674D982172A5D3005D6FA4 /* Spinners and Alerts */;
+			targetProxy = CC674DB12172A5D3005D6FA4 /* PBXContainerItemProxy */;
+		};
+		CC674DBD2172A5D3005D6FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC674D982172A5D3005D6FA4 /* Spinners and Alerts */;
+			targetProxy = CC674DBC2172A5D3005D6FA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC674DA02172A5D3005D6FA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC674DA12172A5D3005D6FA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC674DA82172A5D3005D6FA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC674DA92172A5D3005D6FA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC674DC22172A5D3005D6FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC674DC32172A5D3005D6FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC674DC52172A5D3005D6FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Spinners and Alerts/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Spinners-and-Alerts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC674DC62172A5D3005D6FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Spinners and Alerts/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Spinners-and-Alerts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC674DC82172A5D3005D6FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Spinners and AlertsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Spinners-and-AlertsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spinners and Alerts.app/Spinners and Alerts";
+			};
+			name = Debug;
+		};
+		CC674DC92172A5D3005D6FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Spinners and AlertsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Spinners-and-AlertsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spinners and Alerts.app/Spinners and Alerts";
+			};
+			name = Release;
+		};
+		CC674DCB2172A5D3005D6FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Spinners and AlertsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Spinners-and-AlertsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spinners and Alerts";
+			};
+			name = Debug;
+		};
+		CC674DCC2172A5D3005D6FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R62Y6D2FA;
+				INFOPLIST_FILE = "Spinners and AlertsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirfame.Spinners-and-AlertsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spinners and Alerts";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC674D942172A5D3005D6FA4 /* Build configuration list for PBXProject "Spinners and Alerts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC674DC22172A5D3005D6FA4 /* Debug */,
+				CC674DC32172A5D3005D6FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC674DC42172A5D3005D6FA4 /* Build configuration list for PBXNativeTarget "Spinners and Alerts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC674DC52172A5D3005D6FA4 /* Debug */,
+				CC674DC62172A5D3005D6FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC674DC72172A5D3005D6FA4 /* Build configuration list for PBXNativeTarget "Spinners and AlertsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC674DC82172A5D3005D6FA4 /* Debug */,
+				CC674DC92172A5D3005D6FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC674DCA2172A5D3005D6FA4 /* Build configuration list for PBXNativeTarget "Spinners and AlertsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC674DCB2172A5D3005D6FA4 /* Debug */,
+				CC674DCC2172A5D3005D6FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC674DA32172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC674DA42172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodel */,
+			);
+			currentVersion = CC674DA42172A5D3005D6FA4 /* Spinners_and_Alerts.xcdatamodel */;
+			path = Spinners_and_Alerts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CC674D912172A5D3005D6FA4 /* Project object */;
+}
