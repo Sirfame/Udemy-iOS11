@@ -69,7 +69,9 @@ class ViewController: UIViewController {
                         print(error)
                     } else {
                         // Hooray! Let them use the app now.
+                        
                         print("Signed up!")
+                        self.performSegue(withIdentifier: "showUserTable", sender: self)
                     }
                 }
             } else {
@@ -77,6 +79,7 @@ class ViewController: UIViewController {
                     self.resumeApp()
                     if user != nil {
                         print("Logged in")
+                        self.performSegue(withIdentifier: "showUserTable", sender: self)
                     } else {
                         var errorText = "Unknown error: please try again"
                         if let error = error {
@@ -111,6 +114,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if(PFUser.current() != nil) {
+            self.performSegue(withIdentifier: "showUserTable", sender: self)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

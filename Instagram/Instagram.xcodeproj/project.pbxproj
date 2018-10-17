@@ -16,6 +16,7 @@
 		CC1D344921703CAC001BC19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1D344721703CAC001BC19A /* LaunchScreen.storyboard */; };
 		CC1D345421703CAC001BC19A /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1D345321703CAC001BC19A /* InstagramTests.swift */; };
 		CC1D345F21703CAC001BC19A /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1D345E21703CAC001BC19A /* InstagramUITests.swift */; };
+		CCC1D6142177789300A1E7AE /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1D6132177789300A1E7AE /* UserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CC1D345A21703CAC001BC19A /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1D345E21703CAC001BC19A /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		CC1D346021703CAC001BC19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC1D6132177789300A1E7AE /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		FA58A3C77FC80D59E5BBC0D1 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 		CC1D343A21703CAB001BC19A /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				CCC1D6132177789300A1E7AE /* UserTableViewController.swift */,
 				CC1D343B21703CAB001BC19A /* AppDelegate.swift */,
 				CC1D343D21703CAB001BC19A /* ViewController.swift */,
 				CC1D343F21703CAB001BC19A /* Main.storyboard */,
@@ -336,6 +339,7 @@
 			files = (
 				CC1D343E21703CAB001BC19A /* ViewController.swift in Sources */,
 				CC1D344421703CAB001BC19A /* Instagram.xcdatamodeld in Sources */,
+				CCC1D6142177789300A1E7AE /* UserTableViewController.swift in Sources */,
 				CC1D343C21703CAB001BC19A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

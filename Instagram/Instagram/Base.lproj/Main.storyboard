@@ -77,11 +77,57 @@
                         <outlet property="password" destination="WBG-ef-gdZ" id="83v-Ir-DKR"/>
                         <outlet property="signupOrLoginButton" destination="syo-QR-PcH" id="7Oe-rx-4LV"/>
                         <outlet property="switchLoginModeButton" destination="YFT-W9-by2" id="P3p-M0-THw"/>
+                        <segue destination="Wjy-dp-pqe" kind="show" identifier="showUserTable" id="Lim-cI-0NE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="58X-St-Gdk">
+            <objects>
+                <tableViewController id="dDL-ic-hQH" customClass="UserTableViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dwe-i9-TVT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="oxt-1V-FBs">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oxt-1V-FBs" id="Vfl-7X-Ijl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dDL-ic-hQH" id="FtI-wl-vPK"/>
+                            <outlet property="delegate" destination="dDL-ic-hQH" id="Lth-Nk-QeA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="nTq-UK-U8c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtH-Sb-AuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EO5-Y8-Xjr">
+            <objects>
+                <navigationController id="Wjy-dp-pqe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KDR-Ad-4sG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dDL-ic-hQH" kind="relationship" relationship="rootViewController" id="07W-ge-hS3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tL0-Hx-Ygt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="99"/>
         </scene>
     </scenes>
 </document>
