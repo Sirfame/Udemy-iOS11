@@ -12,6 +12,7 @@ import Parse
 class ViewController: UIViewController {
     
     var signupModeActive = true;
+    let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
     
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -19,6 +20,26 @@ class ViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func pauseApp() {
+        
+        activityIndicator.center = self.view.center;
+        
+        activityIndicator.hidesWhenStopped = true;
+        
+        activityIndicator.style = UIActivityIndicatorView.Style.gray;
+        
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating();
+        
+        UIApplication.shared.beginIgnoringInteractionEvents(); // this actually pauses the interaction between the app and the user.
+    }
+    
+    func resumeApp() {
+        activityIndicator.stopAnimating();
+        UIApplication.shared.endIgnoringInteractionEvents()
     }
 
     @IBOutlet var email: UITextField!
@@ -28,6 +49,7 @@ class ViewController: UIViewController {
         if email.text == "" || password.text == "" {
             displayAlert(title: "Error in form", message: "Please enter an email and password")
         } else {
+            pauseApp()
             if(signupModeActive) {
                 var user = PFUser()
                 user.username = email.text
@@ -38,6 +60,7 @@ class ViewController: UIViewController {
                 print("Signing Up")
                 user.signUpInBackground {
                     (success, error) in
+                    self.resumeApp()
                     if let error = error {
                         //let errorString = error.userInfo["error"] as? NSString
                         // Show the errorString somewhere and let the user try again.
@@ -51,8 +74,9 @@ class ViewController: UIViewController {
                 }
             } else {
                 PFUser.logInWithUsername(inBackground: email.text!, password: password.text!) { (user, error) in
+                    self.resumeApp()
                     if user != nil {
-                        
+                        print("Logged in")
                     } else {
                         var errorText = "Unknown error: please try again"
                         if let error = error {
