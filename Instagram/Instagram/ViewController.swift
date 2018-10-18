@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var signupModeActive = true;
     let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
     
+    
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
@@ -120,7 +121,7 @@ class ViewController: UIViewController {
         if(PFUser.current() != nil) {
             self.performSegue(withIdentifier: "showUserTable", sender: self)
         }
-        
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

@@ -7,12 +7,37 @@
 //
 
 import UIKit
+import Parse
 
 class UserTableViewController: UITableViewController {
 
+    @IBAction func logoutUser(_ sender: Any) {
+        PFUser.logOut()
+        performSegue(withIdentifier: "logoutSegue", sender: self)
+    }
+    
+    var usernames = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let query = PFUser.query()
+        
+        query?.findObjectsInBackground(block: { (users, error) in
+            if error != nil {
+                print(error)
+            } else if let users = users {
+                self.usernames.removeAll()
+                for object in users {
+                    if let user = object as? PFUser {
+                        if let username = user.username {
+                            let name = username.split(separator: "@")[0]
+                            self.usernames.append(String(name))
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        })
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,15 +54,13 @@ class UserTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return usernames.count;
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        cell.textLabel?.text = "Text"
-        // Configure the cell...
-
+        cell.textLabel?.text = usernames[indexPath.row]
         return cell
     }
     

@@ -84,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Users-->
         <scene sceneID="58X-St-Gdk">
             <objects>
                 <tableViewController id="dDL-ic-hQH" customClass="UserTableViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,7 +107,16 @@
                             <outlet property="delegate" destination="dDL-ic-hQH" id="Lth-Nk-QeA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nTq-UK-U8c"/>
+                    <navigationItem key="navigationItem" title="Users" id="nTq-UK-U8c">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Arr-yV-xXa">
+                            <connections>
+                                <action selector="logoutUser:" destination="dDL-ic-hQH" id="rLg-2x-CNm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="LUI-aq-W9Y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtH-Sb-AuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
