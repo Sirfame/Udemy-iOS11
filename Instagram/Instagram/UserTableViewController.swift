@@ -17,21 +17,28 @@ class UserTableViewController: UITableViewController {
     }
     
     var usernames = [""]
+    var objectIds = [""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let query = PFUser.query()
+        
+        query?.whereKey("username", notEqualTo: PFUser.current()?.username)
         
         query?.findObjectsInBackground(block: { (users, error) in
             if error != nil {
                 print(error)
             } else if let users = users {
                 self.usernames.removeAll()
+                self.objectIds.removeAll()
                 for object in users {
                     if let user = object as? PFUser {
                         if let username = user.username {
-                            let name = username.split(separator: "@")[0]
-                            self.usernames.append(String(name))
+                            if let objectId = user.objectId {
+                                let name = username.split(separator: "@")[0]
+                                self.usernames.append(String(name))
+                                self.objectIds.append(objectId)
+                            }
                         }
                     }
                 }
@@ -62,6 +69,20 @@ class UserTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         cell.textLabel?.text = usernames[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        cell?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        
+        let following = PFObject(className: "Following")
+        
+        following["follower"] = PFUser.current()?.objectId
+        
+        following["following"] = objectIds[indexPath.row]
+        
+        following.saveInBackground()
     }
     
 
