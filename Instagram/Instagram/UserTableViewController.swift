@@ -20,7 +20,9 @@ class UserTableViewController: UITableViewController {
     var objectIds = [""]
     var isFollowing = ["":false]
     
-    override func viewDidLoad() {
+    var refresher: UIRefreshControl = UIRefreshControl()
+    
+    @objc func updateTable() {
         super.viewDidLoad()
         let query = PFUser.query()
         
@@ -53,7 +55,12 @@ class UserTableViewController: UITableViewController {
                                             self.isFollowing[objectId] = false
                                         }
                                     }
-                                    self.tableView.reloadData()
+                                    
+                                    if self.usernames.count == self.isFollowing.count {
+                                        self.tableView.reloadData()
+                                        self.refresher.endRefreshing()
+                                    }
+                                    
                                 })
                             }
                         }
@@ -62,6 +69,13 @@ class UserTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         })
+    }
+    
+    override func viewDidLoad() {
+        updateTable()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(UserTableViewController.updateTable), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refresher)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
